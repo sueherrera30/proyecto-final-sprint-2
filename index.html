@@ -14,18 +14,19 @@
   <body>
       <h1 align="center" style="color:#3CB371";>T R E L L O ❤ </h1>
       <h2>¿Qué pendientes tienes?</h2>
-
-      <section id ="almacenListas">
-        <p id="titulo" style="font-size:150%;font-weight: bold;"></p>
-        <ul id="listaGeneral"></ul>
-      </section>
-
-
       <p>crea una lista con las cosas que debes realizar en la semana:</p>
 
+      <div id ="almacenGeneral">
+        <!-- <p id="titulo" style="font-size:150%;font-weight: bold;"></p> -->
+        <ul id="listaGeneral"></ul>
+      </div>
 
-      <input type="text" id="pendiente" placeholder="agrega lista nueva"/>
-      <button onclick="agregar();">agregar ❤ </button>
+
+
+
+
+      <input type="text" id="lista" placeholder="agrega lista nueva"/>
+      <button onclick="crearLista();">agregar ❤ </button></br>
 
     <script src="assets/js/trello.js"></script>
   </body>
