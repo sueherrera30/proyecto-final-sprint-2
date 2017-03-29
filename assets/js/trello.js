@@ -1,4 +1,3 @@
-
 function crearLista(){
    var nuevo = document.createElement("p");
    nuevo.setAttribute("id","titulo");
@@ -18,6 +17,9 @@ function crearLista(){
    almancen.appendChild(boton);
    boton.onclick = function agregarPendientes(){
       var inputPendiente =inputTexto.value;
+      var listaNueva = document.createElement("ul");
+      var listaTexto = document.createTextNode(listaNueva);
+      listaNueva.setAttribute("id","nuevecita");
       var elementoNuevoLista = document.createElement('LI');
       var pendiente = document.createTextNode(inputPendiente);
       elementoNuevoLista.appendChild(pendiente);
@@ -25,11 +27,15 @@ function crearLista(){
       listaGeneral.appendChild(elementoNuevoLista);
 
 }
-      almacen.appendChild(listaGeneral)
+var boton = document.createElement("button");
+var textoBoton = document.createTextNode("borrar");
+boton.appendChild(textoBoton);
+almancen.appendChild(boton);
+boton.onclick = function borrarPendiente(){
+    var lista = document.getElementById("listaGeneral");
+    var elemento= document.getElementsByTagName("li");
+    var i= elemento.length -1;
+    lista.removeChild(elemento[i]);
+  }
 
 }
-
-// contenedor.insertBefore(nuevo,contenedor.firstChild)
-// function agregarNuevaLista(){
-//
-// }
